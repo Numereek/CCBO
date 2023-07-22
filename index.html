@@ -26,24 +26,24 @@
 
             <div class="logo">
                 CCBO
+                <nav class="navigationBox">
+                    <ul class="navigation" id="navigation">
+                        <div>
+                            <li>Search</li>
+                        </div>
+                        <div>
+                            <li>Sales</li>
+                        </div>
+                        <div>
+                            <li>Product</li>
+                        </div>
+                        <div>
+                            <li>Client</li>
+                        </div>
+                    </ul>
+                </nav>
             </div>
 
-            <nav>
-                <ul class="navigation" id="navigation">
-                    <div>
-                        <li>Search</li>
-                    </div>
-                    <div>
-                        <li>Sales</li>
-                    </div>
-                    <div>
-                        <li>Product</li>
-                    </div>
-                    <div>
-                        <li>Client</li>
-                    </div>
-                </ul>
-            </nav>
 
             <div class="searchForm">
 
@@ -62,8 +62,8 @@
                         <label class="formLabel" for="date" name="date">Date</label><input name="date" id="date" type="date" value="">
                     </div>
                     <div class="searchBtn">
-                        <button style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px">Reset</button>
-                        <button style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px">Search</button>
+                        <button id="resetBtn" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">Reset</button>
+                        <button id="searchBtn"style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44)">Search</button>
                     </div>
 
                 </form>
@@ -72,7 +72,179 @@
             <div class="searchResult">
 
             </div>
+
         </div>
+
+        <div id="clientPage" class="clientPage">
+            <div class="logo">
+                CCBO
+                <nav class="navigationBox">
+                    <ul class="navigation" id="navigation">
+                        <div>
+                            <li>Search</li>
+                        </div>
+                        <div>
+                            <li>Sales</li>
+                        </div>
+                        <div>
+                            <li>Product</li>
+                        </div>
+                        <div>
+                            <li>Client</li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            
+
+            <div class="clientTable">
+
+                <div class="newClientBtn" id="newClientBtn">
+                    <button id="newClientBtn" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New client</button>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Ref</th>
+                        <th>Client Name</th>
+                        <th>Carte Receival</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Total Transaction</th>
+                        <th>Net Purchase</th>
+                        <th>Comment</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>#4581235</td>
+                        <td>Coco Hobbies</td>
+                        <td>18/10/2018</td>
+                        <td>+261 34 23 133 79</td>
+                        <td>contact@numereek.com</td>
+                        <td>12</td>
+                        <td>452.153 MGA</td>
+                        <td>#N/A</td>
+                        <td>#N/A</td>
+                    </tr>
+                </table>
+    
+            </div>
+        </div>
+        
+        <div id="salesPage" class="salesPage">
+            <div class="logo">
+                CCBO
+                <nav class="navigationBox">
+                    <ul class="navigation" id="navigation">
+                        <div>
+                            <li>Search</li>
+                        </div>
+                        <div>
+                            <li>Sales</li>
+                        </div>
+                        <div>
+                            <li>Product</li>
+                        </div>
+                        <div>
+                            <li>Client</li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            
+
+            <div class="salesTable">
+
+                <div class="newSalesBtn" id="newSalesBtn">
+                    <button id="newSalesBtn" style="width: 120px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New transaction</button>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Ref</th>
+                        <th>Transaction Date</th>
+                        <th>Product(s)</th>
+                        <th>Total Amount</th>
+                        <th>Delivery Service</th>
+                        <th>Delivery Address</th>
+                        <th>Total Transaction</th>
+                        <th>Comment</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>#5848635</td>
+                        <td>24/10/2019</td>
+                        <td>Product 1 x5, Product 2 x1, Product 3 x1</td>
+                        <td>510.236 MGA</td>
+                        <td>12</td>
+                        <td>Milomay</td>
+                        <td>14 Itaosy Cité</td>
+                        <td>#N/A</td>
+                        <td>#N/A</td>
+                    </tr>
+                </table>
+    
+            </div>
+        </div>
+
+        <div id="productPage" class="productPage">
+            <div class="logo">
+                CCBO
+                <nav class="navigationBox">
+                    <ul class="navigation" id="navigation">
+                        <div>
+                            <li>Search</li>
+                        </div>
+                        <div>
+                            <li>Sales</li>
+                        </div>
+                        <div>
+                            <li>Product</li>
+                        </div>
+                        <div>
+                            <li>Client</li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            
+
+            <div class="productTable">
+
+                <div class="newProductBtn" id="newProductBtn">
+                    <button id="newProductBtn" style="width: 120px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New transaction</button>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Ref</th>
+                        <th>Transaction Date</th>
+                        <th>Product(s)</th>
+                        <th>Total Amount</th>
+                        <th>Delivery Service</th>
+                        <th>Delivery Address</th>
+                        <th>Total Transaction</th>
+                        <th>Comment</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>#5848635</td>
+                        <td>24/10/2019</td>
+                        <td>Product 1 x5, Product 2 x1, Product 3 x1</td>
+                        <td>510.236 MGA</td>
+                        <td>12</td>
+                        <td>Milomay</td>
+                        <td>14 Itaosy Cité</td>
+                        <td>#N/A</td>
+                        <td>#N/A</td>
+                    </tr>
+                </table>
+    
+            </div>
+        </div>
+
+
+
 
     </div>
     
