@@ -3,20 +3,36 @@
     padding: 0px;
     font-family: 'Poppins';
 }
+/* All Modal Mask*/
+.modalMask{
+    width: 100vw;
+    height: 700px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top:0;
+    text-align: center; 
+}
+/*Search Page*/
+#searchPage{
+    display: none;
+}
 .searchPage{
     width: 100vw;
-    height: 100vh;
+    height: 700px;    
 
     display: grid;
     grid-template-columns: 0.4fr 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 0.1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 1fr 2fr;
     row-gap: 15px;
 } 
 .logo{
+    
     grid-column-start: 2;
     grid-column-end: 5;
     grid-row-start: 2;
-
+}
+.navigationBox{
+    margin-top: 10px;
 }
 nav{
     font-size: 11px;
@@ -29,7 +45,7 @@ nav{
     font-size: 14px;
     grid-column-start: 2;
     grid-column-end: 5;
-    grid-row-start: 4;
+    grid-row-start: 3;
 
 }
 .searchResult{
@@ -46,7 +62,7 @@ ul{
     list-style: none;
     display: flex; 
     flex-direction: row;
-    gap: 50px; 
+    gap: 30px; 
 }
 form{
     display: flex; 
@@ -56,13 +72,161 @@ form{
 .searchBtn{
     margin-top: 50px;
 }
-input{
+input, textarea{
     outline: none; 
     border: none; 
     background-color: rgb(241, 241, 241); 
-    font-size: 12px;
+    font-size: 11px;
     padding: 5px 15px 5px 15px; 
     width: 175px;
     border-radius: 8px;
+    color: rgb(44, 44, 44); 
+    resize: none;
+}
+/*Client Page*/
+#clientPage{
+    display: none;
+ }
+.clientPage{
+    width: 100vw;
+    height: 700px;    
 
+    display: grid;
+    grid-template-columns: 0.4fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 1fr 2fr;
+    row-gap: 15px;
+} 
+.clientTable{
+    font-size: 14px;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+
+}
+table{
+    display: grid;
+    border-collapse: collapse;
+}
+th, td{
+    font-size: 11px;
+    font-weight: normal;
+    text-align: left; 
+    border: 1px solid  rgb(44, 44, 44); 
+    margin: auto; 
+    padding: 2px 15px 2px 15px; 
+
+}
+.newClientBtn{
+    margin-bottom: 10px;
+}
+
+/*Sales Page*/
+#salesPage{
+    display: none;
+ }
+.salesPage{
+    width: 100vw;
+    height: 700px;    
+
+    display: grid;
+    grid-template-columns: 0.4fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 1fr 2fr;
+    row-gap: 15px;
+} 
+.salesTable{
+    font-size: 14px;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+
+}
+table{
+    display: grid;
+    border-collapse: collapse;
+}
+th, td{
+    font-size: 11px;
+    font-weight: normal;
+    text-align: left; 
+    border: 1px solid  rgb(44, 44, 44); 
+    margin: auto; 
+    padding: 2px 15px 2px 15px; 
+
+}
+.newSalesBtn{
+    margin-bottom: 10px;
+}
+/*Product Page*/
+#productPage{
+    /*display: none;*/
+ }
+.productPage{
+    width: 100vw;
+    height: 700px;    
+
+    display: grid;
+    grid-template-columns: 0.4fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 1fr 2fr;
+    row-gap: 15px;
+} 
+.productTable{
+    font-size: 14px;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+
+}
+table{
+    display: grid;
+    border-collapse: collapse;
+}
+th, td{
+    font-size: 11px;
+    font-weight: normal;
+    text-align: left; 
+    border: 1px solid  rgb(44, 44, 44); 
+    margin: auto; 
+    padding: 2px 15px 2px 15px; 
+
+}
+.newProductBtn{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+/*Client Modal*/
+.clientModalTitle{
+    margin-top: 15px;
+    font-size: 12px;
+}
+.clientModalContainer{
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border-radius: 18px;
+    margin-top: 50px;
+    z-index: 1000;
+}
+.clientModalForm{
+    margin-top: 10px;
+}
+
+/*Product Modal*/
+.productModalTitle{
+    margin-top: 15px;
+    font-size: 12px;
+}
+.productModalContainer{
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border-radius: 18px;
+    margin-top: 50px;
+    z-index: 1000;
+}
+.productModalForm{
+    margin-top: 10px;
 }
