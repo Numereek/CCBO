@@ -6,7 +6,7 @@
 /* All Modal Mask*/
 .modalMask{
     width: 100vw;
-    height: 700px;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
     top:0;
@@ -18,7 +18,7 @@
 }
 .searchPage{
     width: 100vw;
-    height: 700px;    
+    height: 100vh;    
 
     display: grid;
     grid-template-columns: 0.4fr 1fr 1fr 1fr;
@@ -89,7 +89,7 @@ input, textarea{
  }
 .clientPage{
     width: 100vw;
-    height: 700px;    
+    height: 100vh;    
 
     display: grid;
     grid-template-columns: 0.4fr 1fr 1fr 1fr;
@@ -126,7 +126,7 @@ th, td{
  }
 .salesPage{
     width: 100vw;
-    height: 700px;    
+    height: 100vh;    
 
     display: grid;
     grid-template-columns: 0.4fr 1fr 1fr 1fr;
@@ -162,7 +162,7 @@ th, td{
  }
 .productPage{
     width: 100vw;
-    height: 700px;    
+    height: 100vh;    
 
     display: grid;
     grid-template-columns: 0.4fr 1fr 1fr 1fr;
@@ -221,7 +221,7 @@ th, td{
     display: inline-block;
     text-align: center;
     width: 250px;
-    height: 250px;
+    height: 375px;
     background-color: white;
     border-radius: 18px;
     margin-top: 50px;
