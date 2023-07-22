@@ -5,14 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-
+    <!--Page title-->
     <title>CCBO V.1.0</title>
 
-    
+    <!--link balise-->
     <link rel="stylesheet" href="style/style.css">
+    <link rel="favicon" href="">
+
+    <!--Google font bundles-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600;700&display=swap" rel="stylesheet">
+
 
 </head>
 <body>
+    <div class="main">
+
+        <div id="searchPage" class="searchPage">
+
+            <div class="logo">
+                CCBO
+            </div>
+
+            <nav>
+                <ul class="navigation" id="navigation">
+                    <div>
+                        <li>Search</li>
+                    </div>
+                    <div>
+                        <li>Sales</li>
+                    </div>
+                    <div>
+                        <li>Product</li>
+                    </div>
+                    <div>
+                        <li>Client</li>
+                    </div>
+                </ul>
+            </nav>
+
+            <div class="searchForm">
+
+                <form method="get" action="">
+
+                    <div>
+                        <label class="formLabel" for="transacRef" name="transacRef">Ref</label><input name="transacRef" id="transacRef" type="text">
+                    </div>
+                    <div>
+                        <label class="formLabel" for="client" name="client">Client</label><input name="client" id="client" type="text">
+                    </div>
+                    <div>
+                        <label class="formLabel" for="product" name="product">Product</label><input name="product" id="product" type="text">
+                    </div>
+                    <div>
+                        <label class="formLabel" for="date" name="date">Product</label><input name="date" id="date" type="date">
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="searchResult">
+
+            </div>
+        </div>
+
+    </div>
     
 </body>
 </html>

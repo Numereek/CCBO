@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins';
+}
+.searchPage{
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 1fr 1fr;
+    grid-template-areas:
+    "logo logo logo logo"
+    "nav nav nav nav"
+    "form form form form"
+    "result result result result"
+}
+.logo{
+    grid-area: logo; 
+    place-content: center; 
+}
+nav{
+    grid-area: nav;
+}
+.searchForm{
+    grid-area: form; 
+}
+.searchResult{
+    grid-area: result;
+}
+.formLabel{
+    display: inline-block;
+    width: 10%;
+}
+ul{
+    display: flex; 
+    flex-directin: row;
+    gap: 50px; 
+}
