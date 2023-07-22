@@ -8,33 +8,61 @@
     height: 100vh;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 1fr 1fr;
-    grid-template-areas:
-    "logo logo logo logo"
-    "nav nav nav nav"
-    "form form form form"
-    "result result result result"
-}
+    grid-template-columns: 0.4fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 1fr 1fr;
+    row-gap: 15px;
+} 
 .logo{
-    grid-area: logo; 
-    place-content: center; 
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+
 }
 nav{
-    grid-area: nav;
+    font-size: 11px;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+
 }
 .searchForm{
-    grid-area: form; 
+    font-size: 14px;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 4;
+
 }
 .searchResult{
-    grid-area: result;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 5;
+
 }
 .formLabel{
     display: inline-block;
     width: 10%;
 }
 ul{
+    list-style: none;
     display: flex; 
-    flex-directin: row;
+    flex-direction: row;
     gap: 50px; 
+}
+form{
+    display: flex; 
+    flex-direction : column;
+    gap: 10px;
+}
+.searchBtn{
+    margin-top: 50px;
+}
+input{
+    outline: none; 
+    border: none; 
+    background-color: rgb(241, 241, 241); 
+    font-size: 12px;
+    padding: 5px 15px 5px 15px; 
+    width: 175px;
+    border-radius: 8px;
+
 }
