@@ -22,10 +22,6 @@ clientModalCancel.addEventListener("click", function () {
   clientPagemodalMask.style.display = "none";
 });
 
-salesModalCancel.addEventListener("click", function () {
-  salesPagemodalMask.style.display = "none";
-});
-
 productModalCancel.addEventListener("click", function () {
   productPagemodalMask.style.display = "none";
 });
