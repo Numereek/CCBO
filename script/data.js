@@ -189,6 +189,8 @@ productModalConfirm.addEventListener("click", function () {
 const addAnotherProduct = document.getElementById("addAnotherProduct");
 const insertInputPosition = document.getElementById("insertInputPosition");
 const salesModalContainer = document.getElementById("salesModalContainer");
+let clickCount = 0;
+let containerOverflow = 42.5;
 
 function addProductInput() {
   let productInput = ` 
@@ -200,5 +202,8 @@ function addProductInput() {
 }
 
 addAnotherProduct.addEventListener("click", function () {
+  clickCount++;
+  salesModalContainer.style.height =
+    300 + containerOverflow * clickCount + "px";
   addProductInput();
 });
