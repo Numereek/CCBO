@@ -3,6 +3,12 @@
     padding: 0px;
     font-family: 'Poppins';
 }
+button{
+    cursor: pointer;
+}
+input:focus{
+    box-shadow: 0 2px 8px rgba(131, 154, 255, 0.308);
+}
 /* All Modal Mask*/
 .modalMask{
     width: 100vw;
@@ -26,7 +32,7 @@
     row-gap: 15px;
 } 
 .logo{
-    
+    /*color: #ff4949;*/
     grid-column-start: 2;
     grid-column-end: 5;
     grid-row-start: 2;
