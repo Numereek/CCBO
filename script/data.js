@@ -50,3 +50,4 @@ clientModalConfirm.addEventListener("click", function () {
 
   console.log(cardReceival);
 });
+/*----------------------------*/
