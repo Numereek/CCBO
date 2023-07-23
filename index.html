@@ -25,7 +25,7 @@
 
         <div id="searchPage" class="searchPage">
 
-            <div class="logo">
+            <div class="logo" style="padding-top: 1px">
                 CCBO
                 <nav class="navigationBox">
                     <ul class="navigation" id="navigation">
@@ -105,16 +105,16 @@
                 <nav class="navigationBox">
                     <ul class="navigation" id="navigation">
                         <div>
-                            <li><a href="" id="clientPageSearch">Search</a></li>
+                            <li><a href="#" id="clientPageSearch">Search</a></li>
                         </div>
                         <div>
-                            <li><a href="" id="clientPageSales">Sales</a></li>
+                            <li><a href="#" id="clientPageSales">Sales</a></li>
                         </div>
                         <div>
-                            <li><a href="" id="clientPageProduct">Product</a></li>
+                            <li><a href="#" id="clientPageProduct">Product</a></li>
                         </div>
                         <div>
-                            <li><a href="" style="color:#ff4949" id="clientPageClient">Client</a></li>
+                            <li><a href="#" style="color:#ff4949" id="clientPageClient">Client</a></li>
                         </div>
                     </ul>
                 </nav>
@@ -123,7 +123,7 @@
 
             <div class="clientTable">
 
-                <div class="newClientBtn" id="newClientBtn">
+                <div class="newClientBtn">
                     <button id="newClientBtn" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New client</button>
                 </div>
 
@@ -154,7 +154,7 @@
     
             </div>
 
-            <div class="clientPagemodalMask">
+            <div class="clientPagemodalMask" id="clientPagemodalMask">
                 <div class="clientModal">
                     <div class="clientModalContainer">
                         <div class="clientModalTitle">
@@ -199,16 +199,16 @@
                 <nav class="navigationBox">
                     <ul class="navigation" id="navigation">
                         <div>
-                            <li><a href="" id="salesPageSearch">Search</a></li>
+                            <li><a href="#" id="salesPageSearch">Search</a></li>
                         </div>
                         <div>
-                            <li><a href="" style="color:#ff4949">Sales</a></li>
+                            <li><a href="#" style="color:#ff4949" id="salesPageSales">Sales</a></li>
                         </div>
                         <div>
-                            <li><a href="" id="salesPageProduct">Product</a></li>
+                            <li><a href="#" id="salesPageProduct">Product</a></li>
                         </div>
                         <div>
-                            <li><a href="" id="salesPageClient">Client</a></li>
+                            <li><a href="#" id="salesPageClient">Client</a></li>
                         </div>
                     </ul>
                 </nav>
@@ -217,7 +217,7 @@
 
             <div class="salesTable">
 
-                <div class="newSalesBtn" id="newSalesBtn">
+                <div class="newSalesBtn">
                     <button id="newSalesBtn" style="width: 120px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New transaction</button>
                 </div>
 
@@ -247,7 +247,7 @@
                 </table>
     
             </div>
-            <div class="salesPagemodalMask">
+            <div class="salesPagemodalMask" id="salesPagemodalMask">
                 <div class="salesModal">
                     <div class="salesModalContainer">
                         <div class="salesModalTitle">
@@ -298,16 +298,16 @@
                 <nav class="navigationBox">
                     <ul class="navigation" id="navigation">
                         <div>
-                            <li><a href="" id="productPageSearch">Search</a></li>
+                            <li><a href="#" id="productPageSearch">Search</a></li>
                         </div>
                         <div>
-                            <li><a href="" id="productPageSales">Sales</a></li>
+                            <li><a href="#" id="productPageSales">Sales</a></li>
                         </div>
                         <div>
-                            <li><a href="" style="color:#ff4949" id="productPageProduct">Product</a></li>
+                            <li><a href="#" style="color:#ff4949" id="productPageProduct">Product</a></li>
                         </div>
                         <div>
-                            <li><a href="" id="productPageClient">Client</a></li>
+                            <li><a href="#" id="productPageClient">Client</a></li>
                         </div>
                     </ul>
                 </nav>
@@ -316,8 +316,8 @@
 
             <div class="productTable">
 
-                <div class="newProductBtn" id="newProductBtn">
-                    <button id="newProductBtn" style="width: 120px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New product</button>
+                <div class="newProductBtn">
+                    <button id="newProductBtn" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New product</button>
                 </div>
 
                 <table>
@@ -346,10 +346,10 @@
                 </table>
     
             </div>
-            <div class="productPagemodalMask">
+            <div class="productPagemodalMask" id="productPagemodalMask">
                 <div class="productModal">
                     <div class="productModalContainer">
-                        <div class="productModalTitle">
+                        <div class="productModalTitle" id="newProductBtn">
                             New Product
                         </div>
                         
@@ -394,5 +394,7 @@
 
     </div>
     <script src="script/script.js"></script>
+    <script src="script/navigation.js"></script>
+    <script src="script/modal.js"></script>
 </body>
 </html>
