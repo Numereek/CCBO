@@ -3,6 +3,7 @@ const transactionList = [];
 
 /*--------------Client--------------*/
 const clientModalConfirm = document.getElementById("clientModalConfirm");
+const clientTable = document.getElementById("clientTable");
 const clientName = "";
 
 clientModalConfirm.addEventListener("click", function () {
@@ -24,6 +25,19 @@ clientModalConfirm.addEventListener("click", function () {
   clientList.push(
     new client(clientName, cardReceival, clientModalphone, clientModalemail)
   );
+
+  let row = clientTable.insertRow(-1);
+
+  let clientNameCell = row.insertCell(0);
+  let cardReceivalCell = row.insertCell(1);
+  let clientModalphoneCell = row.insertCell(2);
+  let clientModalemailCell = row.insertCell(2);
+  let clientModalTransaction = row.insertCell(2);
+  let clientModalNetPurchase = row.insertCell(2);
+
+  c1.innerText = "Elon";
+  c2.innerText = 45;
+  c3.innerText = "Houston";
 
   console.log(clientList[0]);
 });
