@@ -28,16 +28,25 @@ clientModalConfirm.addEventListener("click", function () {
 
   let row = clientTable.insertRow(-1);
 
-  let clientNameCell = row.insertCell(0);
-  let cardReceivalCell = row.insertCell(1);
-  let clientModalphoneCell = row.insertCell(2);
-  let clientModalemailCell = row.insertCell(2);
-  let clientModalTransaction = row.insertCell(2);
-  let clientModalNetPurchase = row.insertCell(2);
+  let clientIDCell = row.insertCell(0);
+  let clientNameCell = row.insertCell(1);
+  let cardReceivalCell = row.insertCell(2);
+  let clientModalphoneCell = row.insertCell(3);
+  let clientModalemailCell = row.insertCell(4);
+  let clientModalTransactionCell = row.insertCell(5);
+  let clientModalNetPurchassCell = row.insertCell(6);
+  let clientModalCommentCell = row.insertCell(7);
+  let clientModalActionCell = row.insertCell(8);
 
-  c1.innerText = "Elon";
-  c2.innerText = 45;
-  c3.innerText = "Houston";
+  clientIDCell.innerText = "#8916512";
+  clientNameCell.innerText = clientName;
+  cardReceivalCell.innerText = cardReceival;
+  clientModalphoneCell.innerText = clientModalphone;
+  clientModalemailCell.innerText = clientModalemail;
+  clientModalTransactionCell.innerText = 12;
+  clientModalNetPurchassCell.innerText = "200.000 MGA";
+  clientModalCommentCell.innerText = "";
+  clientModalActionCell.innerText = "";
 
-  console.log(clientList[0]);
+  console.log(cardReceival);
 });
