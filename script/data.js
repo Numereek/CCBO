@@ -118,3 +118,87 @@ productModalConfirm.addEventListener("click", function () {
 });
 
 /*----------------------------*/
+/*--------------Sales--------------*/
+/*const productModalConfirm = document.getElementById("productModalConfirm");
+const productTable = document.getElementById("productTable");
+
+productModalConfirm.addEventListener("click", function () {
+  const productList = [];
+
+  class product {
+    constructor(
+      productNname,
+      description,
+      category,
+      supplier,
+      unitPrice,
+      salesPrice
+    ) {
+      this.productNname = productNname;
+      this.description = description;
+      this.category = category;
+      this.supplier = supplier;
+      this.unitPrice = unitPrice;
+      this.salesPrice = salesPrice;
+    }
+  }
+
+  const productNname = document.getElementById("productModalName").value;
+  const description = document.getElementById("productModalDescr").value;
+  const category = document.getElementById("productModalCat").value;
+  const supplier = document.getElementById("productModalSupp").value;
+  const unitPrice = document.getElementById("productModalUnit").value;
+  const salesPrice = document.getElementById("productModalPrice").value;
+
+  productList.push(
+    new product(
+      productNname,
+      description,
+      category,
+      supplier,
+      unitPrice,
+      salesPrice
+    )
+  );
+  console.log(productList[0]);
+  let row = productTable.insertRow(-1);
+
+  let productIDCell = row.insertCell(0);
+  let productNnameCell = row.insertCell(1);
+  let descriptionCell = row.insertCell(2);
+  let categoryCell = row.insertCell(3);
+  let supplierCell = row.insertCell(4);
+  let unitPriceCell = row.insertCell(5);
+  let salesPriceCell = row.insertCell(6);
+  let commentCell = row.insertCell(7);
+  let actionCell = row.insertCell(8);
+
+  productIDCell.innerText = "#000000";
+  productNnameCell.innerText = productNname;
+  descriptionCell.innerText = description;
+  categoryCell.innerText = category;
+  supplierCell.innerText = supplier;
+  unitPriceCell.innerText = "5EUR";
+  salesPriceCell.innerText = "000.000 MGA";
+  commentCell.innerText = "";
+  actionCell.innerText = "";
+});
+
+/*----------------------------*/
+/*------------add another product----------------*/
+const addAnotherProduct = document.getElementById("addAnotherProduct");
+const insertInputPosition = document.getElementById("insertInputPosition");
+const salesModalContainer = document.getElementById("salesModalContainer");
+
+function addProductInput() {
+  let productInput = ` 
+    <div>
+            <input type="text" name="salesModalProduct" class="salesModalProduct" id="salesModalProduct" placeholder="Product" style="width: 120px">
+            <input type="text" name="salesModalQty" class="salesModalQty" id="salesModalQty" placeholder="Quantity" style="width: 20px">
+    </div>`;
+  insertInputPosition.insertAdjacentHTML("afterend", productInput);
+}
+
+addAnotherProduct.addEventListener("click", function () {
+  addProductInput();
+});
