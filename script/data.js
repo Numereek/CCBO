@@ -4,10 +4,10 @@ const transactionList = [];
 /*--------------Client--------------*/
 const clientModalConfirm = document.getElementById("clientModalConfirm");
 const clientTable = document.getElementById("clientTable");
-const clientName = "";
 
 clientModalConfirm.addEventListener("click", function () {
   const clientList = [];
+
   class client {
     constructor(name, cardReceival, phoneNumber, clientEmail) {
       this.name = name;
@@ -38,16 +38,83 @@ clientModalConfirm.addEventListener("click", function () {
   let clientModalCommentCell = row.insertCell(7);
   let clientModalActionCell = row.insertCell(8);
 
-  clientIDCell.innerText = "#8916512";
+  clientIDCell.innerText = "#000000";
   clientNameCell.innerText = clientName;
   cardReceivalCell.innerText = cardReceival;
   clientModalphoneCell.innerText = clientModalphone;
   clientModalemailCell.innerText = clientModalemail;
-  clientModalTransactionCell.innerText = 12;
-  clientModalNetPurchassCell.innerText = "200.000 MGA";
+  clientModalTransactionCell.innerText = "00";
+  clientModalNetPurchassCell.innerText = "000.000 MGA";
   clientModalCommentCell.innerText = "";
   clientModalActionCell.innerText = "";
-
-  console.log(cardReceival);
 });
+
+/*----------------------------*/
+
+/*--------------Product--------------*/
+const productModalConfirm = document.getElementById("productModalConfirm");
+const productTable = document.getElementById("productTable");
+
+productModalConfirm.addEventListener("click", function () {
+  const productList = [];
+
+  class product {
+    constructor(
+      productNname,
+      description,
+      category,
+      supplier,
+      unitPrice,
+      salesPrice
+    ) {
+      this.productNname = productNname;
+      this.description = description;
+      this.category = category;
+      this.supplier = supplier;
+      this.unitPrice = unitPrice;
+      this.salesPrice = salesPrice;
+    }
+  }
+
+  const productNname = document.getElementById("productModalName").value;
+  const description = document.getElementById("productModalDescr").value;
+  const category = document.getElementById("productModalCat").value;
+  const supplier = document.getElementById("productModalSupp").value;
+  const unitPrice = document.getElementById("productModalUnit").value;
+  const salesPrice = document.getElementById("productModalPrice").value;
+
+  productList.push(
+    new product(
+      productNname,
+      description,
+      category,
+      supplier,
+      unitPrice,
+      salesPrice
+    )
+  );
+  console.log(productList[0]);
+  let row = productTable.insertRow(-1);
+
+  let productIDCell = row.insertCell(0);
+  let productNnameCell = row.insertCell(1);
+  let descriptionCell = row.insertCell(2);
+  let categoryCell = row.insertCell(3);
+  let supplierCell = row.insertCell(4);
+  let unitPriceCell = row.insertCell(5);
+  let salesPriceCell = row.insertCell(6);
+  let commentCell = row.insertCell(7);
+  let actionCell = row.insertCell(8);
+
+  productIDCell.innerText = "#000000";
+  productNnameCell.innerText = productNname;
+  descriptionCell.innerText = description;
+  categoryCell.innerText = category;
+  supplierCell.innerText = supplier;
+  unitPriceCell.innerText = "5EUR";
+  salesPriceCell.innerText = "000.000 MGA";
+  commentCell.innerText = "";
+  actionCell.innerText = "";
+});
+
 /*----------------------------*/
