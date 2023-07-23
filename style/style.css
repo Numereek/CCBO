@@ -10,7 +10,7 @@ input:focus{
     box-shadow: 0 2px 8px rgba(131, 154, 255, 0.308);
 }
 /* All Modal Mask*/
-.modalMask{
+.clientPagemodalMask, .salesPagemodalMask, .productPagemodalMask{
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
