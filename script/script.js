@@ -23,37 +23,3 @@ const searchPageClient = document.getElementById("searchPageClient");
 const productPageClient = document.getElementById("productPageClient");
 const clientPageClient = document.getElementById("clientPageClient");
 const salesPageClient = document.getElementById("salesPageClient");
-
-/*--------------------Search Page Nav--------------------*/
-
-searchPageSearch.addEventListener("click", function () {
-  searchPage.style.display = "none";
-  clientPage.style.display = "none";
-  productPage.style.display = "none";
-  salesPage.style.display = "grid";
-  console.log("searchPageSearch cliqué");
-});
-
-searchPageSales.addEventListener("click", function () {
-  searchPage.style.display = "none";
-  clientPage.style.display = "none";
-  productPage.style.display = "none";
-  salesPage.style.display = "grid";
-  console.log("searchPageSales cliqué");
-});
-searchPageProduct.addEventListener("click", function () {
-  searchPage.style.display = "none";
-  clientPage.style.display = "none";
-  productPage.style.display = "grid";
-  salesPage.style.display = "none";
-  console.log("searchPageProduct cliqué");
-});
-searchPageClient.addEventListener("click", function () {
-  searchPage.style.display = "none";
-  clientPage.style.display = "grid";
-  productPage.style.display = "none";
-  salesPage.style.display = "none";
-  console.log("searchPageClient cliqué");
-});
-
-function navigatePage() {}
