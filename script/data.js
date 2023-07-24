@@ -148,41 +148,48 @@ salesModalConfirm.addEventListener("click", function () {
   const transactionDate = document.getElementById("salesModalDate").value;
   const products = document.getElementById("salesModalProduct").value;
   const qt = document.getElementById("salesModalQty").value;
+  const productsQts = [];
+  productsQts.push(products + " x" + qt);
+  console.log(productsQts);
 
   try {
     var product1 = document.getElementById("salesModalProduct1").value;
     var qt1 = document.getElementById("salesModalQty1").value;
+    productsQts.push(product1 + " x" + qt1);
 
     var product2 = document.getElementById("salesModalProduct2").value;
     var qt2 = document.getElementById("salesModalQty2").value;
+    productsQts.push(product2 + " x" + qt2);
 
     var product3 = document.getElementById("salesModalProduct3").value;
     var qt3 = document.getElementById("salesModalQty3").value;
+    productsQts.push(product3 + " x" + qt3);
 
     var product4 = document.getElementById("salesModalProduct4").value;
     var qt4 = document.getElementById("salesModalQty4").value;
+    productsQts.push(product4 + " x" + qt4);
 
     var product5 = document.getElementById("salesModalProduct5").value;
     var qt5 = document.getElementById("salesModalQty5").value;
+    productsQts.push(product5 + " x" + qt5);
 
     var product6 = document.getElementById("salesModalProduct6").value;
     var qt6 = document.getElementById("salesModalQty6").value;
+    productsQts.push(product6 + " x" + qt6);
 
     var product7 = document.getElementById("salesModalProduct7").value;
     var qt7 = document.getElementById("salesModalQty7").value;
+    productsQts.push(product7 + " x" + qt7);
 
     var product8 = document.getElementById("salesModalProduct8").value;
     var qt8 = document.getElementById("salesModalQty8").value;
+    productsQts.push(product8 + " x" + qt8);
   } catch (e) {}
-
-  console.log(qt1);
 
   /*const totalAmount = document.getElementById("productModalCat").value;*/
   const deiveryService = document.getElementById("salesModalDlv").value;
   const deliveryAddress = document.getElementById("salesModalAddress").value;
   const salesChannel = document.getElementById("productModalPrice").value;
-
-  const productsQts = products + " x" + qt1 + ",";
 
   transactionList.push(
     new transaction(
