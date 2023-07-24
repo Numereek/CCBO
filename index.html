@@ -224,7 +224,7 @@
                     <button id="newSalesBtn" style="width: 120px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New transaction</button>
                 </div>
 
-                <table>
+                <table id="salesTable">
                     <tr>
                         <th>Ref</th>
                         <th>Transaction Date</th>
@@ -261,12 +261,12 @@
                             
                             <form method ="get" action="">
                                 <div>
-                                    <input type="date" name="salesModalDate" class="salesModalDate" id="productsalesModalDateModalName" placeholder="Transaction Date">
+                                    <input type="date" name="salesModalDate" class="salesModalDate" id="salesModalDate" placeholder="Transaction Date" value="2023-04-04">
                                 </div>
                                 
                                 <div id="insertInputPosition">
                                     <div style="font-size: 8px; text-align: left; margin-left: 30px; margin-top: 5px"><a href="#" id="addAnotherProduct">Add another Product</a></div>
-                                    <input type="text" name="salesModalProduct" class="salesModalProduct" id="salesModalProduct" placeholder="Product" style="width: 120px">
+                                    <input type="text" name="salesModalProduct" class="salesModalProduct" id="salesModalProduct" placeholder="Product" style="width: 120px" value="Crochet">
                                     <input type="text" name="salesModalQty" class="salesModalQty" id="salesModalQty" placeholder="Quantity" style="width: 20px">
                                 </div>
                                 

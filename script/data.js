@@ -133,56 +133,57 @@ salesModalConfirm.addEventListener("click", function () {
       totalAmount,
       deiveryService,
       deliveryAddress,
-      salesPrice
+      salesChannel
     ) {
-      this.productNname = productNname;
-      this.description = description;
-      this.category = category;
-      this.supplier = supplier;
-      this.unitPrice = unitPrice;
-      this.salesPrice = salesPrice;
+      this.transactionID = transactionID;
+      this.transactionDate = transactionDate;
+      this.products = products;
+      this.totalAmount = totalAmount;
+      this.deiveryService = deiveryService;
+      this.deliveryAddress = deliveryAddress;
+      this.salesModalChannel = salesChannel;
     }
   }
 
-  const productNname = document.getElementById("productModalName").value;
-  const description = document.getElementById("productModalDescr").value;
-  const category = document.getElementById("productModalCat").value;
-  const supplier = document.getElementById("productModalSupp").value;
-  const unitPrice = document.getElementById("productModalUnit").value;
-  const salesPrice = document.getElementById("productModalPrice").value;
+  const transactionDate = document.getElementById("salesModalDate").value;
+  const products = document.getElementById("salesModalProduct").value;
+  const qt1 = document.getElementById("salesModalQty").value;
+  /*const totalAmount = document.getElementById("productModalCat").value;*/
+  const deiveryService = document.getElementById("salesModalDlv").value;
+  const deliveryAddress = document.getElementById("salesModalAddress").value;
+  const salesChannel = document.getElementById("productModalPrice").value;
 
-  productList.push(
-    new product(
-      productNname,
-      description,
-      category,
-      supplier,
-      unitPrice,
-      salesPrice
+  transactionList.push(
+    new transaction(
+      transactionDate,
+      products,
+      deiveryService,
+      deliveryAddress,
+      salesChannel
     )
   );
-  console.log(productList[0]);
-  let row = productTable.insertRow(-1);
 
-  let productIDCell = row.insertCell(0);
-  let productNnameCell = row.insertCell(1);
-  let descriptionCell = row.insertCell(2);
-  let categoryCell = row.insertCell(3);
-  let supplierCell = row.insertCell(4);
-  let unitPriceCell = row.insertCell(5);
-  let salesPriceCell = row.insertCell(6);
-  let commentCell = row.insertCell(7);
-  let actionCell = row.insertCell(8);
+  let row = salesTable.insertRow(-1);
 
-  productIDCell.innerText = "#000000";
-  productNnameCell.innerText = productNname;
-  descriptionCell.innerText = description;
-  categoryCell.innerText = category;
-  supplierCell.innerText = supplier;
-  unitPriceCell.innerText = "5EUR";
-  salesPriceCell.innerText = "000.000 MGA";
-  commentCell.innerText = "";
-  actionCell.innerText = "";
+  let salesIDCell = row.insertCell(0);
+  let salesTransactionDateCell = row.insertCell(1);
+  let productsCell = row.insertCell(2);
+  let salesTotalAmountCell = row.insertCell(3);
+  let deliveryServiceCell = row.insertCell(4);
+  let deliveryAddressCell = row.insertCell(5);
+  let salesChannelCell = row.insertCell(6);
+  let salesCommentCell = row.insertCell(7);
+  let salesActionCell = row.insertCell(8);
+
+  salesIDCell.innerText = "#000000";
+  salesTransactionDateCell.innerText = transactionDate;
+  productsCell.innerText = products;
+  salesTotalAmountCell.innerText = "00.000";
+  deliveryServiceCell.innerText = "Milomay";
+  deliveryAddressCell.innerText = "14 RUE Itaosy";
+  salesChannelCell.innerText = "Facebook";
+  salesCommentCell.innerText = "";
+  salesActionCell.innerText = "";
 });
 
 /*----------------------------*/
