@@ -10,7 +10,7 @@ input:focus{
     box-shadow: 0 2px 8px rgba(131, 154, 255, 0.308);
 }
 /* All Modal Mask*/
-.clientPagemodalMask{
+.clientPagemodalMask, .salesPagemodalMask, .productPagemodalMask{
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
@@ -19,39 +19,21 @@ input:focus{
     text-align: center; 
     display: none;
 }
-.salesPagemodalMask{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    top:0;
-    text-align: center; 
-    display: none;
-}
-.productPagemodalMask{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    top:0;
-    text-align: center; 
-    display: none;
-}
+
 /*Search Page*/
 #searchPage{
     /*display: none;*/
 }
-.searchPage{
+.searchPage, .clientPage, .productPage{
     width: 100vw;
-    height: 100vh;    
-    /*font-size: 14px;*/
+    height: 100vh;  
+
     display: grid;
     grid-template-columns: 0.4fr 1fr 1fr 1fr;
     grid-template-rows: 0.1fr 0.1fr 1fr 2fr;
     row-gap: 15px;
 } 
 .logo{
-    /*color: #ff4949;*/
     grid-column-start: 2;
     grid-column-end: 5;
     grid-row-start: 2;
@@ -112,15 +94,7 @@ input, textarea{
 #clientPage{
    display: none;
  }
-.clientPage{
-    width: 100vw;
-    height: 100vh;    
-
-    display: grid;
-    grid-template-columns: 0.4fr 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 1fr 2fr;
-    row-gap: 15px;
-} 
+ 
 .clientTable{
     font-size: 14px;
     grid-column-start: 2;
@@ -149,15 +123,7 @@ th, td{
 #salesPage{
     display: none;
  }
-.salesPage{
-    width: 100vw;
-    height: 100vh;    
 
-    display: grid;
-    grid-template-columns: 0.4fr 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 1fr 2fr;
-    row-gap: 15px;
-} 
 .salesTable{
     font-size: 14px;
     grid-column-start: 2;
@@ -185,15 +151,7 @@ th, td{
 #productPage{
     display: none;
  }
-.productPage{
-    width: 100vw;
-    height: 100vh;    
 
-    display: grid;
-    grid-template-columns: 0.4fr 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 1fr 2fr;
-    row-gap: 15px;
-} 
 .productTable{
     font-size: 14px;
     grid-column-start: 2;
