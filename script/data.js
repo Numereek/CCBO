@@ -131,7 +131,7 @@ salesModalConfirm.addEventListener("click", function () {
       transactionDate,
       products,
       totalAmount,
-      deiveryService,
+      deliveryService,
       deliveryAddress,
       salesChannel
     ) {
@@ -139,7 +139,7 @@ salesModalConfirm.addEventListener("click", function () {
       this.transactionDate = transactionDate;
       this.products = products;
       this.totalAmount = totalAmount;
-      this.deiveryService = deiveryService;
+      this.deliveryService = deliveryService;
       this.deliveryAddress = deliveryAddress;
       this.salesModalChannel = salesChannel;
     }
@@ -186,8 +186,8 @@ salesModalConfirm.addEventListener("click", function () {
     productsQts.push(product8 + " x" + qt8);
   } catch (e) {}
 
-  /*const totalAmount = document.getElementById("productModalCat").value;*/
-  const deiveryService = document.getElementById("salesModalDlv").value;
+  const totalAmount = document.getElementById("productModalCat").value;
+  const deliveryService = document.getElementById("salesModalDlv").value;
   const deliveryAddress = document.getElementById("salesModalAddress").value;
   const salesChannel = document.getElementById("productModalPrice").value;
 
@@ -195,7 +195,7 @@ salesModalConfirm.addEventListener("click", function () {
     new transaction(
       transactionDate,
       products,
-      deiveryService,
+      deliveryService,
       deliveryAddress,
       salesChannel
     )
@@ -216,10 +216,10 @@ salesModalConfirm.addEventListener("click", function () {
   salesIDCell.innerText = "#000000";
   salesTransactionDateCell.innerText = transactionDate;
   productsCell.innerText = productsQts;
-  salesTotalAmountCell.innerText = "00.000";
-  deliveryServiceCell.innerText = "Milomay";
-  deliveryAddressCell.innerText = "14 RUE Itaosy";
-  salesChannelCell.innerText = "Facebook";
+  salesTotalAmountCell.innerText = totalAmount;
+  deliveryServiceCell.innerText = deliveryService;
+  deliveryAddressCell.innerText = deliveryAddress;
+  salesChannelCell.innerText = salesChannel;
   salesCommentCell.innerText = "";
   salesActionCell.innerText = "";
 });
