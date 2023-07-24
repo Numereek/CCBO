@@ -6,6 +6,8 @@ const clientModalCancel = document.getElementById("clientModalCancel");
 const salesModalCancel = document.getElementById("salesModalCancel");
 const productModalCancel = document.getElementById("productModalCancel");
 
+const clientModalForm = document.getElementById("clientModalForm");
+
 newSalesBtn.addEventListener("click", function () {
   salesPagemodalMask.style.display = "block";
 });
@@ -23,6 +25,10 @@ clientModalCancel.addEventListener("click", function () {
 });
 
 salesModalCancel.addEventListener("click", function () {
+  closeCancelModal();
+});
+
+function closeCancelModal() {
   const insertedInputList = [];
 
   for (let i = 1; i < clickCount; i++) {
@@ -44,7 +50,7 @@ salesModalCancel.addEventListener("click", function () {
     salesPagemodalMask.style.display = "none";
     salesModalContainer.style.height = "350px";
   }
-});
+}
 
 productModalCancel.addEventListener("click", function () {
   productPagemodalMask.style.display = "none";

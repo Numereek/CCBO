@@ -15,10 +15,10 @@ clientModalConfirm.addEventListener("click", function () {
     }
   }
 
-  const clientName = document.getElementById("clientModalName").value;
-  const cardReceival = document.getElementById("clientModalcr").value;
-  const clientModalphone = document.getElementById("clientModalphone").value;
-  const clientModalemail = document.getElementById("clientModalemail").value;
+  let clientName = document.getElementById("clientModalName").value;
+  let cardReceival = document.getElementById("clientModalcr").value;
+  let clientModalphone = document.getElementById("clientModalphone").value;
+  let clientModalemail = document.getElementById("clientModalemail").value;
 
   clientList.push(
     new client(clientName, cardReceival, clientModalphone, clientModalemail)
@@ -45,6 +45,13 @@ clientModalConfirm.addEventListener("click", function () {
   clientModalNetPurchassCell.innerText = "000.000 MGA";
   clientModalCommentCell.innerText = "";
   clientModalActionCell.innerText = "";
+
+  document.getElementById("clientModalName").value = "";
+  document.getElementById("clientModalcr").value = "";
+  document.getElementById("clientModalphone").value = "";
+  document.getElementById("clientModalemail").value = "";
+
+  clientPagemodalMask.style.display = "none";
 });
 
 /*----------------------------*/
@@ -76,6 +83,7 @@ productModalConfirm.addEventListener("click", function () {
     }
   }
 
+  const productID = "";
   const productNname = document.getElementById("productModalName").value;
   const description = document.getElementById("productModalDescr").value;
   const category = document.getElementById("productModalCat").value;
@@ -93,7 +101,6 @@ productModalConfirm.addEventListener("click", function () {
       salesPrice
     )
   );
-  console.log(productList[0]);
   let row = productTable.insertRow(-1);
 
   let productIDCell = row.insertCell(0);
@@ -106,7 +113,7 @@ productModalConfirm.addEventListener("click", function () {
   let commentCell = row.insertCell(7);
   let actionCell = row.insertCell(8);
 
-  productIDCell.innerText = "#000000";
+  productIDCell.innerText = productID;
   productNnameCell.innerText = productNname;
   descriptionCell.innerText = description;
   categoryCell.innerText = category;
@@ -115,6 +122,14 @@ productModalConfirm.addEventListener("click", function () {
   salesPriceCell.innerText = "000.000 MGA";
   commentCell.innerText = "";
   actionCell.innerText = "";
+
+  document.getElementById("productModalName").value = "";
+  document.getElementById("productModalDescr").value = "";
+  document.getElementById("productModalCat").value = "";
+  document.getElementById("productModalSupp").value = "";
+  document.getElementById("productModalUnit").value = "";
+  document.getElementById("productModalPrice").value = "";
+  productPagemodalMask.style.display = "none";
 });
 
 /*----------------------------*/
@@ -189,7 +204,7 @@ salesModalConfirm.addEventListener("click", function () {
   const totalAmount = document.getElementById("productModalCat").value;
   const deliveryService = document.getElementById("salesModalDlv").value;
   const deliveryAddress = document.getElementById("salesModalAddress").value;
-  const salesChannel = document.getElementById("productModalPrice").value;
+  const salesChannel = document.getElementById("salesModalChannel").value;
 
   transactionList.push(
     new transaction(
@@ -222,6 +237,15 @@ salesModalConfirm.addEventListener("click", function () {
   salesChannelCell.innerText = salesChannel;
   salesCommentCell.innerText = "";
   salesActionCell.innerText = "";
+
+  document.getElementById("salesModalDate").value = "";
+  document.getElementById("salesModalProduct").value = "";
+  document.getElementById("salesModalQty").value = "";
+  document.getElementById("salesModalTotal").value = "";
+  document.getElementById("salesModalDlv").value = "";
+  document.getElementById("salesModalAddress").value = "";
+  document.getElementById("salesModalChannel").value = "";
+  closeCancelModal();
 });
 
 /*----------------------------*/
