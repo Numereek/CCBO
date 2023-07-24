@@ -147,11 +147,42 @@ salesModalConfirm.addEventListener("click", function () {
 
   const transactionDate = document.getElementById("salesModalDate").value;
   const products = document.getElementById("salesModalProduct").value;
-  const qt1 = document.getElementById("salesModalQty").value;
+  const qt = document.getElementById("salesModalQty").value;
+
+  try {
+    var product1 = document.getElementById("salesModalProduct1").value;
+    var qt1 = document.getElementById("salesModalQty1").value;
+
+    var product2 = document.getElementById("salesModalProduct2").value;
+    var qt2 = document.getElementById("salesModalQty2").value;
+
+    var product3 = document.getElementById("salesModalProduct3").value;
+    var qt3 = document.getElementById("salesModalQty3").value;
+
+    var product4 = document.getElementById("salesModalProduct4").value;
+    var qt4 = document.getElementById("salesModalQty4").value;
+
+    var product5 = document.getElementById("salesModalProduct5").value;
+    var qt5 = document.getElementById("salesModalQty5").value;
+
+    var product6 = document.getElementById("salesModalProduct6").value;
+    var qt6 = document.getElementById("salesModalQty6").value;
+
+    var product7 = document.getElementById("salesModalProduct7").value;
+    var qt7 = document.getElementById("salesModalQty7").value;
+
+    var product8 = document.getElementById("salesModalProduct8").value;
+    var qt8 = document.getElementById("salesModalQty8").value;
+  } catch (e) {}
+
+  console.log(qt1);
+
   /*const totalAmount = document.getElementById("productModalCat").value;*/
   const deiveryService = document.getElementById("salesModalDlv").value;
   const deliveryAddress = document.getElementById("salesModalAddress").value;
   const salesChannel = document.getElementById("productModalPrice").value;
+
+  const productsQts = products + " x" + qt1 + ",";
 
   transactionList.push(
     new transaction(
@@ -177,7 +208,7 @@ salesModalConfirm.addEventListener("click", function () {
 
   salesIDCell.innerText = "#000000";
   salesTransactionDateCell.innerText = transactionDate;
-  productsCell.innerText = products;
+  productsCell.innerText = productsQts;
   salesTotalAmountCell.innerText = "00.000";
   deliveryServiceCell.innerText = "Milomay";
   deliveryAddressCell.innerText = "14 RUE Itaosy";
@@ -198,8 +229,8 @@ let containerOverflow = 42.5;
 function addProductInput() {
   let productInput = ` 
     <div id="insertedInput${clickCount}"> 
-            <input type="text" name="salesModalProduct" class="insertedInput" class="salesModalProduct" id="salesModalProduct" placeholder="Product" style="width: 120px">
-            <input type="text" name="salesModalQty" class="insertedInput" class="salesModalQty" id="salesModalQty" placeholder="Quantity" style="width: 20px">
+            <input type="text" name="salesModalProduct" class="insertedInput" class="salesModalProduct" id="salesModalProduct${clickCount}" placeholder="Product" style="width: 120px">
+            <input type="text" name="salesModalQty" class="insertedInput" class="salesModalQty" id="salesModalQty${clickCount}" placeholder="Quantity" style="width: 20px">
     </div>`;
   insertInputPosition.insertAdjacentHTML("afterend", productInput);
 }
