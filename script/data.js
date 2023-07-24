@@ -1,6 +1,3 @@
-const productList = [];
-const transactionList = [];
-
 /*--------------Client--------------*/
 const clientModalConfirm = document.getElementById("clientModalConfirm");
 const clientTable = document.getElementById("clientTable");
@@ -9,7 +6,8 @@ clientModalConfirm.addEventListener("click", function () {
   const clientList = [];
 
   class client {
-    constructor(name, cardReceival, phoneNumber, clientEmail) {
+    constructor(clientID, name, cardReceival, phoneNumber, clientEmail) {
+      this.clientID = clientID;
       this.name = name;
       this.cardReceival = cardReceival;
       this.phoneNumber = phoneNumber;
@@ -60,6 +58,7 @@ productModalConfirm.addEventListener("click", function () {
 
   class product {
     constructor(
+      productID,
       productNname,
       description,
       category,
@@ -67,6 +66,7 @@ productModalConfirm.addEventListener("click", function () {
       unitPrice,
       salesPrice
     ) {
+      this.productID = productID;
       this.productNname = productNname;
       this.description = description;
       this.category = category;
@@ -119,19 +119,20 @@ productModalConfirm.addEventListener("click", function () {
 
 /*----------------------------*/
 /*--------------Sales--------------*/
-/*const productModalConfirm = document.getElementById("productModalConfirm");
-const productTable = document.getElementById("productTable");
+const salesModalConfirm = document.getElementById("salesModalConfirm");
+const salesTable = document.getElementById("salesTable");
 
-productModalConfirm.addEventListener("click", function () {
-  const productList = [];
+salesModalConfirm.addEventListener("click", function () {
+  const transactionList = [];
 
-  class product {
+  class transaction {
     constructor(
-      productNname,
-      description,
-      category,
-      supplier,
-      unitPrice,
+      transactionID,
+      transactionDate,
+      products,
+      totalAmount,
+      deiveryService,
+      deliveryAddress,
       salesPrice
     ) {
       this.productNname = productNname;
@@ -189,14 +190,15 @@ productModalConfirm.addEventListener("click", function () {
 const addAnotherProduct = document.getElementById("addAnotherProduct");
 const insertInputPosition = document.getElementById("insertInputPosition");
 const salesModalContainer = document.getElementById("salesModalContainer");
+
 let clickCount = 0;
 let containerOverflow = 42.5;
 
 function addProductInput() {
   let productInput = ` 
-    <div>
-            <input type="text" name="salesModalProduct" class="salesModalProduct" id="salesModalProduct" placeholder="Product" style="width: 120px">
-            <input type="text" name="salesModalQty" class="salesModalQty" id="salesModalQty" placeholder="Quantity" style="width: 20px">
+    <div id="insertedInput${clickCount}"> 
+            <input type="text" name="salesModalProduct" class="insertedInput" class="salesModalProduct" id="salesModalProduct" placeholder="Product" style="width: 120px">
+            <input type="text" name="salesModalQty" class="insertedInput" class="salesModalQty" id="salesModalQty" placeholder="Quantity" style="width: 20px">
     </div>`;
   insertInputPosition.insertAdjacentHTML("afterend", productInput);
 }
@@ -204,6 +206,6 @@ function addProductInput() {
 addAnotherProduct.addEventListener("click", function () {
   clickCount++;
   salesModalContainer.style.height =
-    300 + containerOverflow * clickCount + "px";
+    350 + containerOverflow * clickCount + "px";
   addProductInput();
 });
