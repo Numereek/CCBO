@@ -25,23 +25,28 @@ clientModalCancel.addEventListener("click", function () {
 salesModalCancel.addEventListener("click", function () {
   const insertedInputList = [];
 
-  addAnotherProduct.addEventListener("click", function () {
-    clickCount++;
-  });
-
-  for (let i = 0; i < clickCount; i++) {
+  for (let i = 1; i < clickCount; i++) {
     const insertedInput = document.getElementById(`insertedInput${i}`);
     insertedInputList.push(insertedInput);
   }
+  clickCount = 0;
 
-  insertedInput1.remove();
-  insertedInput2.remove();
-  insertedInput3.remove();
-  insertedInput4.remove();
-
-  salesPagemodalMask.style.display = "none";
+  try {
+    insertedInput1.remove();
+    insertedInput2.remove();
+    insertedInput3.remove();
+    insertedInput4.remove();
+    insertedInput5.remove();
+    insertedInput6.remove();
+    insertedInput7.remove();
+    insertedInput8.remove();
+  } catch (err) {
+    salesPagemodalMask.style.display = "none";
+    salesModalContainer.style.height = "350px";
+  }
 });
 
 productModalCancel.addEventListener("click", function () {
   productPagemodalMask.style.display = "none";
+  salesModalContainer.style.height = "350px";
 });
