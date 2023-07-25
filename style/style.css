@@ -29,10 +29,10 @@ ul{
 }
 
 .searchPage, .clientPage, .productPage, .salesPage{
+    position: absolute;
     width: 1080px;
     height: 500px;  
     display: block;
-    position: absolute;
     top: 140px;
     left: 100px;
 } 
@@ -72,8 +72,6 @@ th, td{
 #clientTable, #productTable, #salesTable{
     margin-top: 40px;
 }    
-/* All Modal Mask*/
-
 input, textarea{
     outline: none; 
     border: none; 
@@ -88,7 +86,6 @@ input, textarea{
 input:focus{
     box-shadow: 0 2px 8px rgba(131, 154, 255, 0.308);
 }
-
 .modalMask{
     position: absolute;
     width: 100vw;
