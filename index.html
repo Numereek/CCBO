@@ -72,7 +72,7 @@
         <div id="clientPage" class="clientPage" style="display:none" >
                          
             <div class="newClientBtn">
-                <button id="newClientBtn" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New client</button>
+                <button class="modalActivator" id="newClientBtn" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New client</button>
             </div>
 
             <div class="clientTable">
@@ -99,7 +99,7 @@
         <div id="salesPage" class="salesPage" style="display: none">
                     
             <div class="newSalesBtn">
-                <button id="newSalesBtn" style="width: 120px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New transaction</button>
+                <button class="modalActivator" id="newSalesBtn" style="width: 120px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New transaction</button>
             </div>
 
             <div class="salesTable">
@@ -127,7 +127,7 @@
                 
         
             <div class="newProductBtn">
-                <button id="newProductBtn" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New product</button>
+                <button class="modalActivator" id="newProductBtn" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New product</button>
             </div>
 
             <div class="productTable">
@@ -150,9 +150,9 @@
         </div>
 
     </div>
-    <div class="modalMask">
+    <div class="modalMask" id="modalMask">
         
-        <div class="clientModal">
+        <div id="clientModal">
                 <div class="clientModalContainer">
                     <div class="clientModalTitle">
                         New Client
@@ -178,7 +178,7 @@
                             </div>
                             
                             <div class="clientModalbtn">
-                                <button id="clientModalCancel" type="button" class="clientModalCancel" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Cancel</button>
+                                <button id="clientModalCancel" type="button" class="modalCancel" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Cancel</button>
                                 <button id="clientModalConfirm" type="button" class="clientModalConfirm" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Confirm</button>
                             </div>
                             
@@ -187,7 +187,7 @@
                 </div>
         </div>
 
-        <div class="salesModal">
+        <div id="salesModal">
             <div class="salesModalContainer" id="salesModalContainer">
                 <div class="salesModalTitle">
                     New Transaction
@@ -223,7 +223,7 @@
                         </div>
 
                         <div class="salesModalbtn">
-                            <button id="salesModalCancel" type="button" class="salesModalCancel" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Cancel</button>
+                            <button id="salesModalCancel" type="button" class="modalCancel" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Cancel</button>
                             <button id="salesModalConfirm" type="button" class="salesModalConfirm" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Confirm</button>
                         </div>
                         
@@ -232,7 +232,7 @@
             </div>
         </div>
 
-        <div class="productModal">
+        <div id="productModal">
             <div class="productModalContainer">
                 <div class="productModalTitle" id="newProductBtn">
                     New Product
@@ -266,7 +266,7 @@
                         </div>
                         
                         <div class="productModalbtn">
-                            <button id="productModalCancel" type="button" class="productModalCancel" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Cancel</button>
+                            <button id="productModalCancel" type="button" class="modalCancel" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Cancel</button>
                             <button id="productModalConfirm" type="button" class="productModalConfirm" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Confirm</button>
                         </div>
                         
@@ -276,6 +276,8 @@
         </div>
 
     </div>
-    <script src="script.js"></script>
+    <script src="script/navigation.js"></script>
+    <script src="script/modal.js"></script>
+    <script src="script/data.js"></script>
 </body>
 </html>

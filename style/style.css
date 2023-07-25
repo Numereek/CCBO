@@ -89,7 +89,7 @@ input:focus{
 .modalMask{
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 1080px;
     background-color: rgba(0, 0, 0, 0.8);
     top:0;
     text-align: center; 
