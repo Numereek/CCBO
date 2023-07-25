@@ -19,22 +19,22 @@
                 <nav>
                     <ul>
                         <div>
-                            <li><a href="#">Search</a></li>
+                            <li><a href="#" id="navSearch">Search</a></li>
                         </div>
                         <div>
-                            <li><a href="#">Sales</a></li>
+                            <li><a href="#" id="navSales">Sales</a></li>
                         </div>
                         <div>
-                            <li><a href="#">Product</a></li>
+                            <li><a href="#" id="navProduct">Product</a></li>
                         </div>
                         <div>
-                            <li><a href="#">Client</a></li>
+                            <li><a href="#" id="navClient">Client</a></li>
                         </div>
                     </ul>
                 </nav>   
         </div>
 
-        <div id="searchPage" class="searchPage" style="display: grid">
+        <div id="searchPage" class="searchPage" style="display: block">
 
             <div class="searchForm">
 
@@ -63,39 +63,19 @@
             <div class="searchResult">
                 <table>
                     <tr>
-                        <th>Ref</th>
-                        <th>Product Name</th>
-                        <th>Description</th>
-                        <th>Category</th>
-                        <th>Supplier</th>
-                        <th>Unit Price</th>
-                        <th>Sales Price</th>
-                        <th>Comment</th>
-                        <th>Action</th>
-                    </tr>
-                    <tr>
-                        <td>#981335</td>
-                        <td>Crochet 8</td>
-                        <td>8cm 7.5cm 1/4</td>
-                        <td>Tools</td>
-                        <td>Myriam Kiss</td>
-                        <td>5EUR</td>
-                        <td>5.000 MGA</td>
-                        <td>#N/A</td>
-                        <td>#N/A</td>
                     </tr>
                 </table>
             </div>
 
         </div>
 
-        <div id="clientPage" class="clientPage">
+        <div id="clientPage" class="clientPage" style="display:none" >
                          
-            <div class="clientTable">
+            <div class="newClientBtn">
+                <button id="newClientBtn" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New client</button>
+            </div>
 
-                <div class="newClientBtn">
-                    <button id="newClientBtn" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New client</button>
-                </div>
+            <div class="clientTable">
 
                 <table id="clientTable">
                     <tr>
@@ -109,71 +89,21 @@
                         <th>Comment</th>
                         <th>Action</th>
                     </tr>
-                    <tr>
-                        <td>#4581235</td>
-                        <td>Coco Hobbies</td>
-                        <td>18/10/2018</td>
-                        <td>+261 34 23 133 79</td>
-                        <td>contact@numereek.com</td>
-                        <td>12</td>
-                        <td>452.153 MGA</td>
-                        <td>#N/A</td>
-                        <td>#N/A</td>
-                    </tr>
-                    <!--<tr>
-
-                    </tr>-->
                 </table>
     
             </div>
 
-            <div class="clientPagemodalMask" id="clientPagemodalMask">
-                <div class="clientModal">
-                    <div class="clientModalContainer">
-                        <div class="clientModalTitle">
-                            New Client
-                        </div>
-                        
-                        <div class="clientModalForm">
-                            
-                            <form method ="get" action="" id="clientModalForm">
-                                <div>
-                                    <input type="text" name="clientModalName" class="clientModalName" id="clientModalName" placeholder="Client Name">
-                                </div>
-                                
-                                <div>
-                                    <input type="date" name="clientModalcr" class="clientModalcr" id="clientModalcr" placeholder="Card Receival">
-                                </div>
-                                
-                                <div>
-                                    <input type="text" name="clientModalphone" class="clientModalphone" id="clientModalphone" placeholder="Client Phone">
-                                </div>
-                                
-                                <div>
-                                    <input type="email" name="clientModalemail" class="clientModalemail" id="clientModalemail" placeholder="Client Email">
-                                </div>
-                                
-                                <div class="clientModalbtn">
-                                    <button id="clientModalCancel" type="button" class="clientModalCancel" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Cancel</button>
-                                    <button id="clientModalConfirm" type="button" class="clientModalConfirm" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Confirm</button>
-                                </div>
-                                
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         
 
-        <div id="salesPage" class="salesPage">
+        <div id="salesPage" class="salesPage" style="display: none">
                     
+            <div class="newSalesBtn">
+                <button id="newSalesBtn" style="width: 120px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New transaction</button>
+            </div>
 
             <div class="salesTable">
 
-                <div class="newSalesBtn">
-                    <button id="newSalesBtn" style="width: 120px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New transaction</button>
-                </div>
 
                 <table id="salesTable">
                     <tr>
@@ -187,80 +117,20 @@
                         <th>Comment</th>
                         <th>Action</th>
                     </tr>
-                    <tr>
-                        <td>#5848635</td>
-                        <td>24/10/2019</td>
-                        <td>Product 1 x5, Product 2 x1, Product 3 x1</td>
-                        <td>510.236 MGA</td>
-                        <td>Milomay</td>
-                        <td>14 Itaosy Cité</td>
-                        <td>Facebook</td>
-                        <td>#N/A</td>
-                        <td>#N/A</td>
-                    </tr>
                 </table>
     
             </div>
 
-            <div class="salesPagemodalMask" id="salesPagemodalMask">
-                <div class="salesModal">
-                    <div class="salesModalContainer" id="salesModalContainer">
-                        <div class="salesModalTitle">
-                            New Transaction
-                        </div>
-                        
-                        <div class="salesModalForm">
-                            
-                            <form method ="get" action="">
-                                <div>
-                                    <input type="date" name="salesModalDate" class="salesModalDate" id="salesModalDate" placeholder="Transaction Date">
-                                </div>
-                                
-                                <div id="insertInputPosition">
-                                    <div style="font-size: 8px; text-align: left; margin-left: 30px; margin-top: 5px"><a href="#" id="addAnotherProduct">Add another Product</a></div>
-                                    <input type="text" name="salesModalProduct" class="salesModalProduct" id="salesModalProduct" placeholder="Product" style="width: 120px">
-                                    <input type="text" name="salesModalQty" class="salesModalQty" id="salesModalQty" placeholder="Quantity" style="width: 20px">
-                                </div>
-                                
-                                <div>
-                                    <input type="text" name="salesModalTotal" class="salesModalTotal" id="salesModalTotal" placeholder="Total Amount">
-                                </div>
-                                
-                                <div>
-                                    <input type="text" name="salesModalDlv" class="salesModalDlv" id="salesModalDlv" placeholder="Delivery Service">
-                                </div>
-    
-                                <div>
-                                    <input type="text" name="salesModalAddress" class="salesModalAddress" id="salesModalAddress" placeholder="Delivery Address">
-                                </div>
-
-                                <div>
-                                    <input type="text" name="salesModalChannel" class="salesModalChannel" id="salesModalChannel" placeholder="Sales Channel">
-                                </div>
-    
-                                <div class="salesModalbtn">
-                                    <button id="salesModalCancel" type="button" class="salesModalCancel" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Cancel</button>
-                                    <button id="salesModalConfirm" type="button" class="salesModalConfirm" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Confirm</button>
-                                </div>
-                                
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
         </div>
 
-        <div id="productPage" class="productPage">
+        <div id="productPage" class="productPage" style="display: none">
                 
         
+            <div class="newProductBtn">
+                <button id="newProductBtn" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New product</button>
+            </div>
 
             <div class="productTable">
-
-                <div class="newProductBtn">
-                    <button id="newProductBtn" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; margin-right: 5px; color: rgb(44, 44, 44)">New product</button>
-                </div>
-
                 <table id="productTable">
                     <tr>
                         <th>Ref</th>
@@ -277,48 +147,130 @@
     
             </div>
 
-            <div class="productPagemodalMask" id="productPagemodalMask">
-                <div class="productModal">
-                    <div class="productModalContainer">
-                        <div class="productModalTitle" id="newProductBtn">
-                            New Product
+        </div>
+
+    </div>
+    <div class="modalMask">
+        
+        <div class="clientModal">
+                <div class="clientModalContainer">
+                    <div class="clientModalTitle">
+                        New Client
+                    </div>
+                    
+                    <div class="clientModalForm">
+                        
+                        <form method ="get" action="" id="clientModalForm">
+                            <div>
+                                <input type="text" name="clientModalName" class="clientModalName" id="clientModalName" placeholder="Client Name">
+                            </div>
+                            
+                            <div>
+                                <input type="date" name="clientModalcr" class="clientModalcr" id="clientModalcr" placeholder="Card Receival">
+                            </div>
+                            
+                            <div>
+                                <input type="text" name="clientModalphone" class="clientModalphone" id="clientModalphone" placeholder="Client Phone">
+                            </div>
+                            
+                            <div>
+                                <input type="email" name="clientModalemail" class="clientModalemail" id="clientModalemail" placeholder="Client Email">
+                            </div>
+                            
+                            <div class="clientModalbtn">
+                                <button id="clientModalCancel" type="button" class="clientModalCancel" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Cancel</button>
+                                <button id="clientModalConfirm" type="button" class="clientModalConfirm" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Confirm</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+        </div>
+
+        <div class="salesModal">
+            <div class="salesModalContainer" id="salesModalContainer">
+                <div class="salesModalTitle">
+                    New Transaction
+                </div>
+                
+                <div class="salesModalForm">
+                    
+                    <form method ="get" action="">
+                        <div>
+                            <input type="date" name="salesModalDate" class="salesModalDate" id="salesModalDate" placeholder="Transaction Date">
                         </div>
                         
-                        <div class="productModalForm">
-                            
-                            <form method ="get" action="">
-                                <div>
-                                    <input type="text" name="productModalName" class="productModalName" id="productModalName" placeholder="Product Name">
-                                </div>
-                                
-                                <div>
-                                    <textarea name="productModalDescr" id="productModalDescr" cols="30" rows="3" placeholder="Product Description" style="height:50px; margin: 0px"></textarea>
-                                </div>
-                                
-                                <div>
-                                    <input type="text" name="productModalCat" class="productModalCat" id="productModalCat" placeholder="Category">
-                                </div>
-                                
-                                <div>
-                                    <input type="text" name="productModalSupp" class="productModalSupp" id="productModalSupp" placeholder="Supplier">
-                                </div>
-
-                                <div>
-                                    <input type="text" name="productModalUnit" class="productModalUnit" id="productModalUnit" placeholder="Unit Price">
-                                </div>
-
-                                <div>
-                                    <input type="text" name="productModalPrice" class="productModalPrice" id="productModalPrice" placeholder="Sale Price">
-                                </div>
-                                
-                                <div class="productModalbtn">
-                                    <button id="productModalCancel" type="button" class="productModalCancel" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Cancel</button>
-                                    <button id="productModalConfirm" type="button" class="productModalConfirm" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Confirm</button>
-                                </div>
-                                
-                            </form>
+                        <div id="insertInputPosition">
+                            <div style="font-size: 8px; text-align: left; margin-left: 30px; margin-top: 5px"><a href="#" id="addAnotherProduct">Add another Product</a></div>
+                            <input type="text" name="salesModalProduct" class="salesModalProduct" id="salesModalProduct" placeholder="Product" style="width: 120px">
+                            <input type="text" name="salesModalQty" class="salesModalQty" id="salesModalQty" placeholder="Quantity" style="width: 20px">
                         </div>
-                    </div>
+                        
+                        <div>
+                            <input type="text" name="salesModalTotal" class="salesModalTotal" id="salesModalTotal" placeholder="Total Amount">
+                        </div>
+                        
+                        <div>
+                            <input type="text" name="salesModalDlv" class="salesModalDlv" id="salesModalDlv" placeholder="Delivery Service">
+                        </div>
+
+                        <div>
+                            <input type="text" name="salesModalAddress" class="salesModalAddress" id="salesModalAddress" placeholder="Delivery Address">
+                        </div>
+
+                        <div>
+                            <input type="text" name="salesModalChannel" class="salesModalChannel" id="salesModalChannel" placeholder="Sales Channel">
+                        </div>
+
+                        <div class="salesModalbtn">
+                            <button id="salesModalCancel" type="button" class="salesModalCancel" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Cancel</button>
+                            <button id="salesModalConfirm" type="button" class="salesModalConfirm" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Confirm</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="productModal">
+            <div class="productModalContainer">
+                <div class="productModalTitle" id="newProductBtn">
+                    New Product
+                </div>
+                
+                <div class="productModalForm">
+                    
+                    <form method ="get" action="">
+                        <div>
+                            <input type="text" name="productModalName" class="productModalName" id="productModalName" placeholder="Product Name">
+                        </div>
+                        
+                        <div>
+                            <textarea name="productModalDescr" id="productModalDescr" cols="30" rows="3" placeholder="Product Description" style="height:50px; margin: 0px"></textarea>
+                        </div>
+                        
+                        <div>
+                            <input type="text" name="productModalCat" class="productModalCat" id="productModalCat" placeholder="Category">
+                        </div>
+                        
+                        <div>
+                            <input type="text" name="productModalSupp" class="productModalSupp" id="productModalSupp" placeholder="Supplier">
+                        </div>
+
+                        <div>
+                            <input type="text" name="productModalUnit" class="productModalUnit" id="productModalUnit" placeholder="Unit Price">
+                        </div>
+
+                        <div>
+                            <input type="text" name="productModalPrice" class="productModalPrice" id="productModalPrice" placeholder="Sale Price">
+                        </div>
+                        
+                        <div class="productModalbtn">
+                            <button id="productModalCancel" type="button" class="productModalCancel" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Cancel</button>
+                            <button id="productModalConfirm" type="button" class="productModalConfirm" style="width: 100px; height: 30px; border-radius: 8px; border: none; font-size: 11px; color: rgb(44, 44, 44); margin-top: 5px">Confirm</button>
+                        </div>
+                        
+                    </form>
                 </div>
             </div>
         </div>

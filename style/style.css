@@ -3,15 +3,16 @@
     padding: 0px;
     font-family: 'Poppins';
 }
-
+.logo{
+    font-size: 16px;
+}
 .navigationBar{
-
     position: absolute; 
-    
     top: 50px;
-    left: 180px;
+    left: 100px;
     height: 50px;
     width: 250px;
+    font-size: 11px;
 }
 ul{
     margin-top: 20px;
@@ -20,70 +21,59 @@ ul{
     flex-direction: row;
     gap: 30px; 
 }
-
-button{
-    cursor: pointer;
-}
-input:focus{
-    box-shadow: 0 2px 8px rgba(131, 154, 255, 0.308);
-}
-/* All Modal Mask*/
-.clientPagemodalMask, .salesPagemodalMask, .productPagemodalMask{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+.newClientBtn, .newSalesBtn, .newProductBtn{
     position: absolute;
-    top:0;
-    text-align: center; 
-    display: none;
-}
-
-/*Search Page*/
- 
-.searchPage, .clientPage, .productPage{
-    width: 100vw;
-    height: 100vh;  
-    display: grid;
-    grid-template-columns: 0.4fr 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 1fr 2fr;
-    row-gap: 15px;
-} 
-
-.navigationBox{
-    margin-top: 10px;
-}
-nav{
+    margin-bottom: 10px;
+    cursor: pointer;
     font-size: 11px;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 3;
-
-}
-.searchForm{
-    font-size: 12px;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 3;
-
-}
-.searchResult{
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 4;
-}
-.formLabel{
-    display: inline-block;
-    width: 10%;
 }
 
+.searchPage, .clientPage, .productPage, .salesPage{
+    width: 1080px;
+    height: 500px;  
+    display: block;
+    position: absolute;
+    top: 140px;
+    left: 100px;
+} 
+.searchBtn{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
 form{
     display: flex; 
     flex-direction : column;
     gap: 10px;
+    font-size: 12px;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
 }
-.searchBtn{
-    margin-top: 50px;
+
+.formLabel{
+    display: inline-block;
+    width: 10%;
 }
+table{
+    width: 100%;
+    border-collapse: collapse;
+}    
+tr{
+    background-color: rgb(248, 248, 248);
+}    
+th, td{
+    font-size: 11px;
+    font-weight: normal;
+    text-align: left; 
+    border: 1px solid  rgb(92, 91, 91); 
+    margin: auto; 
+    padding: 2px 15px 2px 15px; 
+}    
+#clientTable, #productTable, #salesTable{
+    margin-top: 40px;
+}    
+/* All Modal Mask*/
+
 input, textarea{
     outline: none; 
     border: none; 
@@ -95,91 +85,30 @@ input, textarea{
     color: rgb(44, 44, 44); 
     resize: none;
 }
-
-/*Client Page*/
-
- 
-.clientTable{
-    font-size: 14px;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 3;
-
-}
-table{
-    display: grid;
-    border-collapse: collapse;
-}
-th, td{
-    font-size: 11px;
-    font-weight: normal;
-    text-align: left; 
-    border: 1px solid  rgb(44, 44, 44); 
-    margin: auto; 
-    padding: 2px 15px 2px 15px; 
-
-}
-.newClientBtn{
-    margin-bottom: 10px;
+input:focus{
+    box-shadow: 0 2px 8px rgba(131, 154, 255, 0.308);
 }
 
-/*Sales Page*/
+.modalMask{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    top:0;
+    text-align: center; 
+    display: none;
+}    
 
-
-.salesTable{
-    font-size: 14px;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 3;
-
-}
-table{
-    display: grid;
-    border-collapse: collapse;
-}
-th, td{
-    font-size: 11px;
-    font-weight: normal;
-    text-align: left; 
-    border: 1px solid  rgb(44, 44, 44); 
-    margin: auto; 
-    padding: 2px 15px 2px 15px; 
-
-}
-.newSalesBtn{
-    margin-bottom: 10px;
-}
-/*Product Page*/
-
-.productTable{
-    font-size: 14px;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 3;
-
-}
-table{
-    display: grid;
-    border-collapse: collapse;
-}
-th, td{
-    font-size: 11px;
-    font-weight: normal;
-    text-align: left; 
-    border: 1px solid  rgb(44, 44, 44); 
-    margin: auto; 
-    padding: 2px 15px 2px 15px; 
-
-}
-.newProductBtn{
-    margin-bottom: 10px;
-}
-/*Client Modal*/
-.clientModalTitle{
+.clientModalTitle, .productModalTitle, .salesModalTitle{
     margin-top: 15px;
     font-size: 12px;
 }
+.clientModalForm, .productModalForm,.salesModalForm {
+    margin-top: 10px;
+}
 .clientModalContainer{
+    position: absolute;
+    left: 180px;
     display: inline-block;
     text-align: center;
     width: 250px;
@@ -189,16 +118,10 @@ th, td{
     margin-top: 50px;
     z-index: 1000;
 }
-.clientModalForm{
-    margin-top: 10px;
-}
 
-/*Product Modal*/
-.productModalTitle{
-    margin-top: 15px;
-    font-size: 12px;
-}
 .productModalContainer{
+    position: absolute;
+    left: 180px;
     display: inline-block;
     text-align: center;
     width: 250px;
@@ -208,16 +131,11 @@ th, td{
     margin-top: 50px;
     z-index: 1000;
 }
-.productModalForm{
-    margin-top: 10px;
-}
-/*Sales Modal*/
-.salesModalTitle{
-    margin-top: 15px;
-    font-size: 12px;
-}
+
 .salesModalContainer{
+    position: absolute;
     display: inline-block;
+    left: 180px;
     text-align: center;
     width: 250px;
     height: 350px;
@@ -225,8 +143,5 @@ th, td{
     border-radius: 18px;
     margin-top: 50px;
     z-index: 1000;
-}
-.salesModalForm{
-    margin-top: 10px;
 }
 
