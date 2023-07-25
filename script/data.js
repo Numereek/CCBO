@@ -8,10 +8,29 @@ const productInput = document.querySelectorAll(
 );
 
 let productList = [];
+let productInitStart = 0;
 
 productModalConfirm.addEventListener("click", function () {
+  let date = new Date().toJSON();
+  let productInitStartString = productInitStart.toString();
+  let productReference =
+    date
+      .split("T")
+      .join("")
+      .split(".")
+      .join("")
+      .split("-")
+      .join("")
+      .split(":")
+      .join("")
+      .substring(0, 12) + productInitStartString.padStart(3, "0");
+  productInitStart++;
+
+  console.log(productReference);
+  console.log(productInitStart);
+
   let row = productTable.insertRow(-1);
-  row.insertCell().innerText = "";
+  row.insertCell().innerText = "#" + productReference;
 
   productInput.forEach(function (item) {
     row.insertCell().innerText = item.value;
