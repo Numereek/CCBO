@@ -14,3 +14,13 @@ modalCancel.forEach(function (item) {
     modalMask.style.display = "none";
   });
 });
+
+const salesModalCancel = document.getElementById("salesModalCancel");
+
+salesModalCancel.addEventListener("click", () => {
+  for (i = 0; i < clickCount; i++) {
+    document.getElementById(`insertedInput${i}`).remove();
+  }
+  clickCount = 0;
+  salesModalContainer.style.height = "350px";
+});
