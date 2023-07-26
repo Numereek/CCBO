@@ -45,6 +45,11 @@ productModalConfirm.addEventListener("click", function () {
   });
   row.insertCell().innerText = "n/a";
   row.insertCell().innerText = "n/a";
+
+  modalMask.style.display = "none";
+  formElement.forEach(function (item) {
+    item.reset();
+  });
 });
 
 clientModalConfirm.addEventListener("click", function () {
@@ -74,6 +79,11 @@ clientModalConfirm.addEventListener("click", function () {
   row.insertCell().innerText = "n/a";
   row.insertCell().innerText = "n/a";
   row.insertCell().innerText = "n/a";
+
+  modalMask.style.display = "none";
+  formElement.forEach(function (item) {
+    item.reset();
+  });
 });
 
 salesModalConfirm.addEventListener("click", function () {
@@ -114,8 +124,18 @@ salesModalConfirm.addEventListener("click", function () {
   }
   let productQtyText = productQty.join("");
   let productQtyTextLength = productQtyText.length;
-
   let productQtyTransac = productQtyText.slice(0, productQtyTextLength - 1);
 
   row.insertCell(2).innerText = productQtyTransac;
+
+  modalMask.style.display = "none";
+  formElement.forEach(function (item) {
+    item.reset();
+  });
+
+  for (i = 0; i < clickCount; i++) {
+    document.getElementById(`insertedInput${i}`).remove();
+  }
+  clickCount = 0;
+  salesModalContainer.style.height = "350px";
 });

@@ -8,10 +8,14 @@ modalActivator.forEach(function (item) {
 });
 
 const modalCancel = document.querySelectorAll(".modalCancel");
+const formElement = document.querySelectorAll(".formElement");
 
 modalCancel.forEach(function (item) {
   item.addEventListener("click", function () {
     modalMask.style.display = "none";
+    formElement.forEach(function (item) {
+      item.reset();
+    });
   });
 });
 
