@@ -10,8 +10,8 @@ function resizeContainer() {
 
 function addProductInput() {
   let inputHMTL = `<div id="insertedInput${clickCount}">
-    <input type="text" name="salesModalProduct" placeholder="Product" style="width: 120px">
-    <input type="text" name="salesModalQty" placeholder="Quantity" style="width: 20px">
+    <input type="text" class="salesModalProduct" name="salesModalProduct" placeholder="Product" style="width: 120px">
+    <input type="text" class="salesModalQty" name="salesModalQty" placeholder="Quantity" style="width: 20px">
     </div>`;
 
   if (clickCount < 9) {

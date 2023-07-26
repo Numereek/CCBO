@@ -77,11 +77,7 @@ clientModalConfirm.addEventListener("click", function () {
 });
 
 salesModalConfirm.addEventListener("click", function () {
-  const salesInput = document.querySelectorAll(
-    ".salesModalForm input .toPick, .salesModalForm textarea"
-  );
-
-  console.log(salesInput);
+  const salesInput = document.querySelectorAll(".toPick");
 
   let date = new Date().toJSON();
   let transacInitStartString = transacInitStart.toString();
@@ -105,4 +101,21 @@ salesModalConfirm.addEventListener("click", function () {
     row.insertCell().innerText = item.value;
     transacList.push(item.value);
   });
+  row.insertCell().innerText = "n/a";
+  row.insertCell().innerText = "n/a";
+
+  const productQty = [];
+  const products = document.querySelectorAll(".salesModalProduct");
+  const qty = document.querySelectorAll(".salesModalQty");
+
+  for (i = 0; i < products.length; i++) {
+    productQty.push(products[i].value);
+    productQty.push(" x" + qty[i].value + ", ");
+  }
+  let productQtyText = productQty.join("");
+  let productQtyTextLength = productQtyText.length;
+
+  let productQtyTransac = productQtyText.slice(0, productQtyTextLength - 1);
+
+  row.insertCell(2).innerText = productQtyTransac;
 });
