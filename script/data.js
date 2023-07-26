@@ -4,16 +4,13 @@ const salesTable = document.getElementById("salesTable");
 
 const productModalConfirm = document.getElementById("productModalConfirm");
 const clientModalConfirm = document.getElementById("clientModalConfirm");
-const salesModalConfirm = document.getElementById("clientModalConfirm");
+const salesModalConfirm = document.getElementById("salesModalConfirm");
 
 const productInput = document.querySelectorAll(
   ".productModalForm input, textarea"
 );
 const clientInput = document.querySelectorAll(
   ".clientModalForm input, .clientModalForm textarea"
-);
-const salesInput = document.querySelectorAll(
-  ".salesModalForm input, .salesModalForm textarea"
 );
 
 let productList = [];
@@ -77,4 +74,35 @@ clientModalConfirm.addEventListener("click", function () {
   row.insertCell().innerText = "n/a";
   row.insertCell().innerText = "n/a";
   row.insertCell().innerText = "n/a";
+});
+
+salesModalConfirm.addEventListener("click", function () {
+  const salesInput = document.querySelectorAll(
+    ".salesModalForm input .toPick, .salesModalForm textarea"
+  );
+
+  console.log(salesInput);
+
+  let date = new Date().toJSON();
+  let transacInitStartString = transacInitStart.toString();
+  let transacReference =
+    date
+      .split("T")
+      .join("")
+      .split(".")
+      .join("")
+      .split("-")
+      .join("")
+      .split(":")
+      .join("")
+      .substring(0, 12) + transacInitStartString.padStart(3, "0");
+  transacInitStart++;
+
+  let row = salesTable.insertRow(-1);
+  row.insertCell().innerText = "#C" + transacReference;
+
+  salesInput.forEach(function (item) {
+    row.insertCell().innerText = item.value;
+    transacList.push(item.value);
+  });
 });
